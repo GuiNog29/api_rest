@@ -1,10 +1,10 @@
-import Sequelize, { Model } from 'sequelize';
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _sequelize = require('sequelize'); var _sequelize2 = _interopRequireDefault(_sequelize);
 
-export default class Student extends Model {
+ class Student extends _sequelize.Model {
   static init(sequelize) {
     super.init({
       name: {
-        type: Sequelize.STRING,
+        type: _sequelize2.default.STRING,
         defaultValue: '',
         validate: {
           len: {
@@ -14,7 +14,7 @@ export default class Student extends Model {
         },
       },
       surname: {
-        type: Sequelize.STRING,
+        type: _sequelize2.default.STRING,
         defaultValue: '',
         validate: {
           len: {
@@ -24,7 +24,7 @@ export default class Student extends Model {
         },
       },
       email: {
-        type: Sequelize.STRING,
+        type: _sequelize2.default.STRING,
         defaultValue: '',
         unique: {
           msg: 'E-mail already exists.',
@@ -36,7 +36,7 @@ export default class Student extends Model {
         },
       },
       age: {
-        type: Sequelize.INTEGER,
+        type: _sequelize2.default.INTEGER,
         defaultValue: '',
         validate: {
           isInt: {
@@ -45,7 +45,7 @@ export default class Student extends Model {
         },
       },
       weight: {
-        type: Sequelize.FLOAT,
+        type: _sequelize2.default.FLOAT,
         defaultValue: '',
         validate: {
           isFloat: {
@@ -54,7 +54,7 @@ export default class Student extends Model {
         },
       },
       height: {
-        type: Sequelize.FLOAT,
+        type: _sequelize2.default.FLOAT,
         defaultValue: '',
         validate: {
           isFloat: {
@@ -71,4 +71,4 @@ export default class Student extends Model {
   static associate(models) {
     this.hasMany(models.Picture, { foreignKey: 'student_id' });
   }
-}
+} exports.default = Student;
