@@ -17,10 +17,5 @@ module.exports = {
     'no-param-reassign': 'off',
     camelcase: 'off',
   },
-  'prettier/prettier': [
-    'error',
-    {
-      endOfLine: 'auto',
-    },
-  ],
+
 };
