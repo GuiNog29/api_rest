@@ -19,5 +19,10 @@ module.exports = {
     endOfLine: 0,
     'linebreak-style': 0,
   },
-
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
 };
