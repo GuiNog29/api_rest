@@ -17,4 +17,10 @@ module.exports = {
     'no-param-reassign': 'off',
     camelcase: 'off',
   },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
 };
