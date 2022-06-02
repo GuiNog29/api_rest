@@ -16,6 +16,8 @@ module.exports = {
     'import/first': 'off',
     'no-param-reassign': 'off',
     camelcase: 'off',
+    endOfLine: 0,
+    'linebreak-style': 0,
   },
   "parserOptions": {
     "ecmaVersion": 6,
